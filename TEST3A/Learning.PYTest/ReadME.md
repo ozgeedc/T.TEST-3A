@@ -1,7 +1,7 @@
 > Dekoratörler diğer bir değişle iç içe fonksiyonlar demektir.
 > Python’da dekoratörler “@” karakteri ile fonksiyonların veya class’ların üzerlerine konularak tanımlanır.
 
-# ////  Fixture Decorator (Fixture Dekoratörü):
+#  Fixture Decorator (Fixture Dekoratörü):
 
 > ```@pytest.fixture``` olarak kullanılır.Testlerin çalıştırılmasını kolaylaştırmak için kullanılır.
 
@@ -37,7 +37,7 @@ def test_product_stock(sample_product):
 
 ```
 
-# /// Parametrized Tests Decorator (Parametreli Test Dekoratörü):
+# Parametrized Tests Decorator (Parametreli Test Dekoratörü):
 
 > ```@pytest.mark.parametrize``` olarak kullanılır.Bir test işlevini farklı parametre setleriyle çalıştırmak için kullanılır.
  
@@ -69,7 +69,7 @@ def test_product_price(product, sample_product):
 >   ```sample_product``` adında bir fixture tanımladık. Bu, testlerde kullanılacak örnek bir ürün verisini oluşturur.
 >   ```test_product_price``` adında bir test işlevi tanımladık. Bu işlev, farklı ürün fiyatları ile sample_product’ın fiyatını karşılaştırır. 
 
-# /// Skip Decorator (Atla Dekoratörü):
+#  Skip Decorator (Atla Dekoratörü):
 
 > ``` @pytest.mark.skip ``` olarak kullanılır.Bir testi geçici olarak atlamak için kullanılır.
 >Örneğin,e-ticaret verilerini test ederken fiyat güncellemeleri gibi durumlar için testleri geçici olarak atlayabilirsiniz.
@@ -95,7 +95,7 @@ def test_product_price(sample_product):
     assert sample_product.price == 100
 ```
 
-# /// XFail Decorator (Başarısız Olması Beklenen Test Dekoratörü):
+#  XFail Decorator (Başarısız Olması Beklenen Test Dekoratörü):
 
 > ```@pytest.mark.xfail ``` olarak kullanılır.Bir testin bilinçli olarak başarısız olmasını beklediğimizi belirtmek için kullanılır.
 
