@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "2024-10MAY"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
