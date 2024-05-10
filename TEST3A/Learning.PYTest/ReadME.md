@@ -1,4 +1,4 @@
-** Dekoratörler diğer bir değişle iç içe fonksiyonlar demektir. Python’da dekoratörler “@” karakteri ile fonksiyonların veya class’ların üzerlerine konularak tanımlanır.**
+**Dekoratörler diğer bir değişle iç içe fonksiyonlar demektir. Python’da dekoratörler “@” karakteri ile fonksiyonların veya class’ların üzerlerine konularak tanımlanır.**
 
 # Fixture Decorator (Fixture Dekoratörü):
 **```pytest.fixture``` olarak kullanılır.Testlerin çalıştırılmasını kolaylaştırmak için kullanılır.**
