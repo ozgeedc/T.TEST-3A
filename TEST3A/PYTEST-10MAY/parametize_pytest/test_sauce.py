@@ -1,3 +1,14 @@
+#1) Başarılı giriş yaptıktan sonra sepete ekleyip satın alma işlemini tamamlar.
+import pytest
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from time import sleep
+
+
+# Parametrize fonksiyonu ile 3 farklı veriyle test
+
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -22,7 +33,7 @@ class test_SauceDemo:
         {"username": "locked_out_user", "password": "secret_sauce", "expected_success": False, "error_message": "Epic sadface: Sorry, this user has been locked out."},
         {"username": "deneme_test", "password": "secret_sauce", "expected_success": False, "error_message": "Epic sadface: Username and password do not match any user in this service"},
     ])
-    def test_login(self, credentials):
+    def test_paramatize_login(self, credentials):
         usernameInput = WebDriverWait(self.driver, 10).until(
             EC.visibility_of_element_located((By.ID, "user-name")))
         usernameInput.send_keys(credentials["username"])
@@ -47,4 +58,3 @@ class test_SauceDemo:
 if __name__ == "__main__":
     pytest.main(["-v", "--html=report.html"])
 
-    

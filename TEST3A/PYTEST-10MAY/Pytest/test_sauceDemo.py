@@ -33,7 +33,10 @@ class Test_sauceDemo:
         loginButton.click()
         errorMessage = self.driver.find_element(By.XPATH,"//*[@id='login_button_container']/div/form/div[3]/h3")
         assert errorMessage.text == "Epic sadface: Username and password do not match any user in this service"
+
+
     # başarısız giriş 2, Kullanıcı şifre yanlış girer
+    
     def test_two_invalid_login(self): 
         WebDriverWait(self.driver,5).until(expected_conditions.visibility_of_element_located((By.ID,"user-name")))
         username = self.driver.find_element(By.ID,"user-name")
@@ -46,6 +49,8 @@ class Test_sauceDemo:
         loginButton.click()
         errorMessage = self.driver.find_element(By.XPATH,"//*[@id='login_button_container']/div/form/div[3]/h3")
         assert errorMessage.text == "Epic sadface: Username and password do not match any user in this service"   
+
+
     # başarısız giriş 3 , kullanıcı adı yanlış şifre doğru
     def test_three_invalid_login(self): 
         WebDriverWait(self.driver,5).until(expected_conditions.visibility_of_element_located((By.ID,"user-name")))
